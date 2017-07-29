@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: kotlin-spring-data-example
+  datasource:
+    url: 'jdbc:h2:mem:'
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
+    show_sql: true
+  jpa:
+    show-sql: false
+    hibernate:
+      dialect: org.hibernate.dialect.H2Dialect
+      ddl-auto: create-drop
+         
+logging:
+  pattern:
+    console:%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n
+  level:
+    org:
+      hibernate:
+        SQL: info  
